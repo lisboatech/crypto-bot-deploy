@@ -33,9 +33,7 @@ yarn-error.log*
 
 .vercel
 
-/components/Global/Login.jsx
 
-/components/Global/Signup.jsx
 
 
 

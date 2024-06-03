@@ -144,12 +144,13 @@ const index = () => {
       <Preloader />
       {/* Signup */}
       {activeComponent == "Signup" ? (
-        <Signup 
+        ""
+         /* <Signup 
           axios={axios}
           setActiveComponent={setActiveComponent}
           notifyError={notifyError}
-          notifySuccess={notifySuccess}
-        />
+          notifySuccess={notifySuccess} 
+        /> */
 
       ) : (
         //
