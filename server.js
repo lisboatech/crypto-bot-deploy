@@ -9,7 +9,7 @@ const nextServer = next({ dev });
 
 const handle = nextServer.getRequestHandler();
 
-dotenv.config({path: "./.env.local"});
+dotenv.config({path: "./config.env"});
 
 const app = require("./app");
 
@@ -30,7 +30,6 @@ const port = 3000;
 
 
 nextServer.prepare().then(() => {
-
     
     app.get("*", (req, res) => {
         return handle(req, res);
