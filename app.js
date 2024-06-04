@@ -14,8 +14,9 @@ app.use(cors());
 app.options("*", cors());
 
 
-app.use("/api/v1/user", userRouter)
-
+app.use("/api/v1/user", userRouter);
+// CHANGE
+app.use("/api", useRouter);
 
 
 module.exports = app;
