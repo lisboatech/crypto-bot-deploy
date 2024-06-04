@@ -9,7 +9,7 @@ const nextServer = next({ dev });
 
 const handle = nextServer.getRequestHandler();
 
-dotenv.config({path: "./.env"});
+dotenv.config({path: "./config.env"});
 
 const app = require("./app");
 
