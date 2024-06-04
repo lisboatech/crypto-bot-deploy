@@ -9,7 +9,7 @@ const nextServer = next({ dev });
 
 const handle = nextServer.getRequestHandler();
 
-dotenv.config({path: "./.env.local"});
+dotenv.config({path: "./.env"});
 
 const app = require("./app");
 
@@ -26,7 +26,7 @@ mongoose.connect(DB, {
 }).then(() => console.log("DB connection successful!"));
 
 
-const port = 2000; 
+const port = 3000; 
 
 
 nextServer.prepare().then(() => {
