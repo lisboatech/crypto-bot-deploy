@@ -140,20 +140,79 @@ const index = () => {
     <div>
       {/* */}
       <MovingSubmenu />
-      {/* */}
       <Preloader />
       {/* Signup */}
-      {activeComponent == "Signup" ? (
+      {activeComponent == "Home" ? (
         
-        <Signup 
-          axios={axios}
-          setActiveComponent={setActiveComponent}
-          notifyError={notifyError}
-          notifySuccess={notifySuccess} 
-        /> 
+        <div className="techwave_fn_wrapper">
+          <div className="techwave_fn_wrap">
+          
+            <Search />
+            <Header 
+              networkName={networkName}
+              setActiveComponent={setActiveComponent}
+            />  
+            <SideBar 
+              setActiveComponent={setActiveComponent}
+            />
+            
+            {
+              activeComponent == "Home" ? (
+                <Home/>
+              ) : activeComponent == "Trade Tokens" ? (
+                <TradeTokens/>
+              ) : activeComponent == "Top Exchange Tokens" ? (
+                <TopExchangeTokens/>
+              ) : activeComponent == "Networks" ? (
+                <Networks 
+                  networkName={networkName} 
+                  setNetworkName={setNetworkName}
+                  notifyError={notifyError}
+                  notifySuccess={notifySuccess}
+                />
+              ) : activeComponent == "Add Network" ? (
+                <AddNetwork
+                  axios={axios} 
+                />
+              ) : activeComponent == "Trading" ? (
+                <Trading 
+                  axios={axios} 
+                  trading={trading}
+                  tradingCount={tradingCount}
+                  length={length}
+                  setTradingCount={setTradingCount}
+                  setActiveComponent={setActiveComponent}
+                  notifyError={notifyError}
+                  notifySuccess={notifySuccess}
+                />
+              ) : activeComponent == "Pricing" ? (
+                <Price
+                  buyMemberShip={buyMemberShip}
+                  setMembershipType={setMembershipType}
+                />
+              ) : activeComponent == "Profile" ? (
+                <Profile
+                  setActiveComponent={setActiveComponent}
+                  notifyError={notifyError}
+                  notifySuccess={notifySuccess}
+                />
+              ) : activeComponent == "Setting" ? (
+                <Setting
+                  notifyError={notifyError}
+                  notifySuccess={notifySuccess}
+                  axios={axios}
+                />
+              ): activeComponent == "Add Token Pair" ? (
+                <AddTokenPair />
+              ) : (
+                ""
+              )
+            }
+          </div>
+        </div> 
 
       ) : (
-        //
+      
         <div className="techwave_fn_wrapper">
           <div className="techwave_fn_wrap">
           
