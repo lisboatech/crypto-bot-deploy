@@ -78,12 +78,7 @@ const Login = ({ setActiveComponent, axios, notifyError, notifySuccess }) => {
   return (
     <div className="techwave_fn_sign">
       <div className="sign__content">
-      <h1 className="center">
-        <img src="img/light-logo.png" className="desktop_logo"
-            alt=""/>
-        <img src="img/light-logo.png" className="retina_logo"
-        alt=""/>
-      </h1>
+      <h1 className="logo">Design</h1>
 
         <form className="login">
           <div className="form__content">
